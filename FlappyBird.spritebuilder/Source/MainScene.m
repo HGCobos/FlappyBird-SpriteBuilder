@@ -13,14 +13,6 @@
     CCNode *_ground1;
     CCNode *_ground2;
     NSArray *_grounds;
-   
-    CCNode *_cloud1;
-    CCNode *_cloud2;
-    NSArray *_clouds;
-    
-    CCNode *_bush1;
-    CCNode *_bush2;
-    NSArray *_bushes;
     
     NSTimeInterval _sinceTouch;
     
@@ -40,8 +32,6 @@
     self.userInteractionEnabled = TRUE;
     
     _grounds = @[_ground1, _ground2];
-    _clouds = @[_cloud1, _cloud2];
-    _bushes = @[_bush1, _bush2];
     
     for (CCNode *ground in _grounds) {
         // set collision txpe
@@ -153,7 +143,6 @@
             ground.position = ccp(ground.position.x + 2 * ground.contentSize.width, ground.position.y);
         }
     }
-
     
     NSMutableArray *offScreenObstacles = nil;
     
